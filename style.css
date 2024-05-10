@@ -322,7 +322,9 @@ section.topo-do-site .flex {
     transform: scale(1.05);
     transition: 0.5s;
 }
-
+.buttons-person i {
+    margin-left: 5px;
+}
 .buttons-person>input {
     background-color: var(--primary-color);
     color: var(--primary-color);
