@@ -35,3 +35,25 @@ function toggle() {
     }
 }
 /* end script */
+
+/* script pra API do WhatsApp */
+function enviarMensagem() {
+    let nome = document.getElementById('name').value
+    let email = document.getElementById('email').value
+    let phone = document.getElementById('phone').value
+    let msg = document.getElementById('msg').value
+
+    let buildMsg = `Olá Raphael, me chamo ${nome} e vim através do seu portifólio.
+    O motivo do meu contato é: ${msg}.
+    
+    Meios de contato para retorno:
+    Telefone: ${phone}
+    E-mail: ${email}`
+
+    // Construindo o link para a API do WhatsApp com os valores do formulário
+    let linkWhatsApp = `https://api.whatsapp.com/send?phone=5527997215329&text=${encodeURIComponent(buildMsg)}`
+
+    // Abrindo o link em uma nova aba
+    window.open(linkWhatsApp, "_blank");
+}
+/* end script */
