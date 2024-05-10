@@ -301,19 +301,21 @@ section.topo-do-site .flex {
     align-items: center;
 }
 
-.buttons-person button {
+.buttons-person a {
     width: 25%;
     height: 50px;
     background-color: var(--primary-color);
     border-radius: 10px;
     border: 2px solid var(--primary-color);
     transition: 0.5s;
+    color: var(--secondary-color);
+    text-decoration: none;
 }
 
-.buttons-person button:hover {
+.buttons-person a:hover {
     background-color: var(--secondary-color);
     border: 1px solid var(--primary-color);
-    color: #fff;
+    color: var(--tertiary-color);
     transform: scale(1.05);
     transition: 0.5s;
 }
@@ -811,7 +813,7 @@ footer .line-footer p a {
         align-items: center;
     }
 
-    .buttons-person>button {
+    .buttons-person>a {
         width: 35%;
         max-width: 150px;
         min-width: 92px;
@@ -819,12 +821,13 @@ footer .line-footer p a {
         border-radius: 10px;
         border: 1px solid var(--primary-color);
         transition: background-color 0.5s;
+        color: var(--secondary-color);
     }
 
-    .buttons-person>button:hover {
+    .buttons-person>a:hover {
         background-color: var(--secondary-color);
         border: 1px solid var(--primary-color);
-        color: #fff;
+        color: var(--tertiary-color);
     }
 
     .buttons-person>input {
@@ -970,7 +973,7 @@ body.light {
 .light .skills span {
     color: var(--primary-light-color);
 }
-.light .buttons-person button:hover {
+.light .buttons-person a:hover {
     border: 2px solid var(--tertiary-light-color);
     color: var(--secondary-light-color);
     background-color: var(--body-light-color);
