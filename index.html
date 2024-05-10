@@ -301,11 +301,11 @@
                 <h2 class="titulo">Entrar em contato</span></h2>
 
                 <form action="">
-                    <input type="text" name="" id="" placeholder="Seu nome completo:" required>
-                    <input type="text" name="" id="" placeholder="Seu e-mail:" required>
-                    <input type="text" name="" id="" placeholder="Seu celular:">
-                    <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
-                    <button type="submit" class="btn-enviar"> <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem</button>
+                    <input type="text" id="name" placeholder="Seu nome completo:" required>
+                    <input type="email"id="email" placeholder="Seu e-mail:" required>
+                    <input type="tel" id="phone" placeholder="Seu celular:">
+                    <textarea id="msg" placeholder="Sua mensagem" required></textarea>
+                    <button type="submit" class="btn-enviar" onclick="enviarMensagem()"> <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem</button>
                 </form>
             </div><!--interface-->
         </section><!--formulario-->
