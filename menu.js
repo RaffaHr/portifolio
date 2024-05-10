@@ -43,6 +43,11 @@ function enviarMensagem() {
     let phone = document.getElementById('phone').value
     let msg = document.getElementById('msg').value
 
+    if (phone.length >= 0) {
+        let phone = "Não informado"
+        return phone
+    }
+
     let buildMsg = `Olá Raphael, me chamo ${nome} e vim através do seu portifólio.
     O motivo do meu contato é: ${msg}.
     
