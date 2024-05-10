@@ -310,6 +310,9 @@ section.topo-do-site .flex {
     transition: 0.5s;
     color: var(--secondary-color);
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .buttons-person a:hover {
@@ -822,9 +825,6 @@ footer .line-footer p a {
         border: 1px solid var(--primary-color);
         transition: background-color 0.5s;
         color: var(--secondary-color);
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .buttons-person>a:hover {
