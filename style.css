@@ -975,6 +975,9 @@ body.light {
     color: var(--secondary-light-color);
     background-color: var(--body-light-color);
 }
+.light .btn-abrir-menu i {
+    color: var(--secondary-light-color);
+}
 .light .txt-topo-site h1 {
     color: var(--primary-light-color);
 }
