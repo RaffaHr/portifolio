@@ -644,7 +644,7 @@ footer .line-footer p a {
     color: #fff;
 }
 
-.logo-footer img {
+.logo-footer a img {
     width: 80px;
     height: 80px;
 }
@@ -944,7 +944,7 @@ footer .line-footer p a {
     footer .line-footer {
         text-align: center;
     }
-    .logo-footer img {
+    .logo-footer a img {
         width: 60px;
         height: 60px;
     }
@@ -1012,7 +1012,7 @@ body.light {
 .light footer {
     background-color: var(--footer-light-color);
 }
-.light .logo-footer img {
+.light .logo-footer a img {
     filter: invert();
 }
 .light .btn-footer a {
