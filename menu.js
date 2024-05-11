@@ -52,7 +52,7 @@ function loadTheme() {
         toggleLightMode()
     }
 }
-
+loadTheme()
 chkDesk.addEventListener('change', function () {
 toggleLightMode()
 
