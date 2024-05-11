@@ -61,3 +61,12 @@ E-mail: *${email}*`
     window.open(linkWhatsApp, "_blank");
 }
 /* end script */
+
+/* save themme in local storage */
+
+localStorage.removeItem('light')
+
+if(document.body.classList.contains('light')) {
+    localStorage.setItem('light', 1)
+}
+/* end script */
