@@ -59,7 +59,49 @@ chkMobile.addEventListener('change', function () {
         localStorage.setItem('light', 1)
     }
     })
-/* end script */
+    /* script que deixa o input de thema ativo ou desativado de acordo com o tema atual selecionado pelo usuário */
+    /* DESKTOP */
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // Verifica se o body contém a classe 'light' ao carregar a página
+        if (document.body.classList.contains('light')) {
+            // Se contiver, marque o checkbox
+            chkDesk.checked = true;
+        } else {
+            // Caso contrário, desmarque o checkbox
+            chkDesk.checked = false;
+        }
+    
+        // Adiciona um ouvinte de eventos ao body para verificar mudanças na classe 'light'
+        document.body.addEventListener('change', function() {
+            if (document.body.classList.contains('light')) {
+                chkDesk.checked = true;
+            } else {
+                chkDesk.checked = false;
+            }
+        });
+    });
+    /* MOBILE */
+
+            // Verifica se o body contém a classe 'light' ao carregar a página
+            if (document.body.classList.contains('light')) {
+                // Se contiver, marque o checkbox
+                chkMobile.checked = true;
+            } else {
+                // Caso contrário, desmarque o checkbox
+                chkMobile.checked = false;
+            }
+        
+            // Adiciona um ouvinte de eventos ao body para verificar mudanças na classe 'light'
+            document.body.addEventListener('change', function() {
+                if (document.body.classList.contains('light')) {
+                    chkMobile.checked = true;
+                } else {
+                    chkMobile.checked = false;
+                }
+            });
+
+    /* end script */
 
 /* script pra API do WhatsApp */
 function enviarMensagem() {
