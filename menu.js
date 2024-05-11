@@ -40,12 +40,11 @@ function toggle() {
 function enviarMensagem() {
     let nome = document.getElementById('name').value
     let email = document.getElementById('email').value
-    let phone = parseFloat(document.getElementById('phone').value)
+    let phone = document.getElementById('phone').value.trim();
     let msg = document.getElementById('msg').value
 
 if (phone.length === 0) {
     phone = "Não informado";
-    return phone
 }
 
     let buildMsg = `Olá Raphael, me chamo ${nome} e vim através do seu portifólio.
