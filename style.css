@@ -396,8 +396,20 @@ section.topo-do-site .flex {
     max-height: 550px;
     border-radius: 15px;
     z-index: 0;
+    position: relative;
+    animation: flutuar 4s infinite ease-in-out;
 }
-
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 .about-text {
     width: 600px;
     height: 100%;
