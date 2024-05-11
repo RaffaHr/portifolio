@@ -23,21 +23,9 @@ overlay.addEventListener('click', ()=>{
 /* end script */
 
 /* script do botao e ação de trocar de tema */
-/* 
-const chkDesk = document.getElementById('chk-desk');
-const chkModal = document.getElementById('chk-modal');
-const body = document.getElementById('body')
-
-function toggle() {
-    if (body.classList.contains('light')) {
-        body.classList.remove('light');
-    } else {
-        body.classList.add('light');
-    }
-} */
 
 const chkDesk = document.getElementById('chk-desk');
-const chkModal = document.getElementById('chk-modal');
+const chkMobile = document.getElementById('chk-mobile');
 
 /* toggle light mode */
 function toggleLightMode() {
@@ -62,6 +50,15 @@ if(document.body.classList.contains('light')) {
     localStorage.setItem('light', 1)
 }
 })
+chkMobile.addEventListener('change', function () {
+    toggleLightMode()
+    
+    localStorage.removeItem('light')
+    
+    if(document.body.classList.contains('light')) {
+        localStorage.setItem('light', 1)
+    }
+    })
 /* end script */
 
 /* script pra API do WhatsApp */
