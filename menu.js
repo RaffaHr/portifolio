@@ -23,6 +23,7 @@ overlay.addEventListener('click', ()=>{
 /* end script */
 
 /* script do botao e ação de trocar de tema */
+/* 
 const chkDesk = document.getElementById('chk-desk');
 const chkModal = document.getElementById('chk-modal');
 const body = document.getElementById('body')
@@ -33,7 +34,34 @@ function toggle() {
     } else {
         body.classList.add('light');
     }
+} */
+
+const chkDesk = document.getElementById('chk-desk');
+const chkModal = document.getElementById('chk-modal');
+
+/* toggle light mode */
+function toggleLightMode() {
+    document.body.classList.toggle('light')
 }
+
+/* Load light or dark mode */
+function loadTheme() {
+    const lightMode = localStorage.getItem('light')
+
+    if (lightMode) {
+        toggleLightMode()
+    }
+}
+
+chkDesk.addEventListener('change', function () {
+toggleLightMode()
+
+localStorage.removeItem('light')
+
+if(document.body.classList.contains('light')) {
+    localStorage.setItem('light', 1)
+}
+})
 /* end script */
 
 /* script pra API do WhatsApp */
@@ -59,14 +87,5 @@ E-mail: *${email}*`
 
     // Abrindo o link em uma nova aba
     window.open(linkWhatsApp, "_blank");
-}
-/* end script */
-
-/* save themme in local storage */
-
-localStorage.removeItem('light')
-
-if(document.body.classList.contains('light')) {
-    localStorage.setItem('light', 1)
 }
 /* end script */
