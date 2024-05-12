@@ -945,7 +945,9 @@ footer .line-footer p a {
     }
     .card-work {
         flex: 0 0 100%;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: var(--body-dark-color);
         width: 100vw;
         transition: left 0.5s ease, right 0.5s ease;
