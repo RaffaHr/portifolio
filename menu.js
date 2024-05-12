@@ -99,7 +99,6 @@ document.body.addEventListener("change", function () {
     chkMobile.checked = false;
   }
 });
-
 /* end script */
 
 /* script pra API do WhatsApp */
@@ -127,5 +126,38 @@ E-mail: *${email}*`;
 
   // Abrindo o link em uma nova aba
   window.open(linkWhatsApp, "_blank");
+}
+/* end script */
+/* script de carrossel */
+
+var slideIndex = 1;
+exibirSlides(slideIndex);
+
+function mudarSlide(n) {
+    exibirSlides(slideIndex += n);
+}
+
+function irParaSlide(n) {
+    exibirSlides(slideIndex = n);
+}
+
+function exibirSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("card-work");
+    var pontos = document.getElementsByClassName("ponto");
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < pontos.length; i++) {
+        pontos[i].className = pontos[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    pontos[slideIndex - 1].className += " active";
 }
 /* end script */
