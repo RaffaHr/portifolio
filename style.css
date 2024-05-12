@@ -994,7 +994,6 @@ footer .line-footer p a {
         transition: all 0.5s;
     }
     .block-mobile {
-        width: 293px;
         height: 324px;
         display: flex;
         justify-content: center;
