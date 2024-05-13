@@ -967,7 +967,7 @@ footer .line-footer p a {
           margin: 10px 40px;
         }
       .carousel-control-prev, .carousel-control-next {
-        display: block;
+        display: none;
       }
     .block-desk {
         display: none;
