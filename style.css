@@ -957,6 +957,7 @@ footer .line-footer p a {
       .carousel-indicators [data-bs-target] {
         border-radius: 100px;
         background-clip: border-box;
+        background-color: var(--tertiary-color);
         width: 20px;
         height: 0;
       }
@@ -1054,19 +1055,7 @@ body.light {
 .light h2.titulo {
     color: var(--primary-light-color);
 }
-.light .card-work {
-    background-color: var(--body-light-color);
-}
-.light .prev {
-    color: var(--secondary-light-color);
-}
-.light .next {
-    color: var(--secondary-light-color);
-}
-.light .ponto {
-    background-color: #cccaca;
-}
-.light .ponto.active {
+.light .carousel-indicators [data-bs-target] {
     background-color: var(--secondary-light-color);
 }
 .light .title-work-block h3 {
