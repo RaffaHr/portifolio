@@ -581,6 +581,11 @@ section.portfolio .flex {
     color: var(--tertiary-color);
     transition: 0.3s;
 }
+.github-repositorio a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: 0.3s;
+}
 /* ESTILO DO FORMULÁRIO DE CONTATO */
 section.formulario {
     border-top: 4px solid var(--primary-color);
