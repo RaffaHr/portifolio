@@ -561,6 +561,13 @@ section.portfolio .flex {
     text-decoration: none;
     color: var(--tertiary-color);
 }
+.repositorio {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 .github-repositorio {
     width: 100%;
     height: 40px;
@@ -572,6 +579,7 @@ section.portfolio .flex {
     cursor: pointer;
     z-index: 999999;
     transition: 0.3s;
+    text-decoration: none;
 }
 .github-repositorio i {
     margin: 0 5px;
