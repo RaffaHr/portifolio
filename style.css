@@ -512,7 +512,7 @@ section.portfolio .flex {
     display: flex;
     flex-direction: column;
 }
-.img-port {
+.img-port-dev-burguer {
     width: 360px;
     height: 460px;
     background-size: cover;
@@ -527,12 +527,30 @@ section.portfolio .flex {
     border-radius: 40px 40px 0px 0px;
 }
 
-.img-port:hover {
+.img-port-dev-burguer:hover {
     background-position: center;
     background-color: #000000b8;
     transition: background-position none;
 }
-
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: center;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    border-radius: 40px 40px 0px 0px;
+}
+.img-port:hover {
+    background-position: 100% 100%;
+    background-color: #000000b8;
+    transition: background-position none;
+}
 .overlay {
     width: 100%;
     height: 100vw;
