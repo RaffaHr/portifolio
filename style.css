@@ -528,7 +528,7 @@ section.portfolio .flex {
 }
 
 .img-port:hover {
-    background-position: 100% 100%;
+    background-position: center;
     background-color: #000000b8;
     transition: background-position none;
 }
