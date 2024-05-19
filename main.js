@@ -111,20 +111,46 @@ function enviarMensagem() {
   if (phone.length === 0) {
     phone = "Não informado";
   }
-
-  let buildMsg = `Olá Raphael, me chamo *${nome}* e vim através do seu portifólio.
-O motivo do meu contato é: ${msg}.
+  if(email.length === 0) {
+    email = "Não informado"
+  }
+  if(nome.length === 0 || msg.length === 0) {
+    alert('Gentileza inserir o nome e a mensagem!')
+    return
+  } else {
+    let buildMsg = `Olá Raphael, me chamo *${nome}* e vim através do seu portifólio.
+    O motivo do meu contato é: ${msg}.
+        
+    Meios de contato para retorno:
+    Telefone: *${phone}*
+    E-mail: *${email}*`;
     
-Meios de contato para retorno:
-Telefone: *${phone}*
-E-mail: *${email}*`;
+      // Construindo o link para a API do WhatsApp com os valores do formulário
+      let linkWhatsApp = `https://api.whatsapp.com/send?phone=5527997215329&text=${encodeURIComponent(
+        buildMsg
+      )}`;
+    
+      // Abrindo o link em uma nova aba
+      window.open(linkWhatsApp, "_blank");
+    }
+  }
+/* end script */
 
-  // Construindo o link para a API do WhatsApp com os valores do formulário
-  let linkWhatsApp = `https://api.whatsapp.com/send?phone=5527997215329&text=${encodeURIComponent(
-    buildMsg
-  )}`;
+/* script Typing Text Animation */
 
-  // Abrindo o link em uma nova aba
-  window.open(linkWhatsApp, "_blank");
+const text = document.querySelector('.sec-text')
+
+const textLoad = () => {
+  setTimeout(() => {
+    text.textContent = "Desenvolvedor"
+  }, 0);
+  setTimeout(() => {
+    text.textContent = "Analista"
+  }, 4050);
+  setTimeout(() => {
+    text.textContent = "Estudante"
+  }, 8050);
 }
+textLoad()
+setInterval(textLoad, 12000)
 /* end script */

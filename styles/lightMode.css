@@ -1,0 +1,79 @@
+/* ESTILO DE CORES DO TEMA CLARO */
+body.light {
+  background-color: var(--body-light-color);
+  transition: all 0.5s;
+}
+.light hr {
+  color: var(--secondary-light-color);
+  background-color: var(--secondary-light-color);
+  border: 1px solid var(--secondary-light-color);
+}
+.light .logo img {
+  filter: invert();
+}
+.light header nav.menu-desktop a:hover {
+  color: var(--secondary-light-color);
+  background-color: var(--body-light-color);
+}
+.light .btn-abrir-menu i {
+  color: var(--secondary-light-color);
+}
+.light .txt-topo-site h1 {
+  color: var(--primary-light-color);
+}
+.light .txt-topo-site p {
+  color: var(--primary-light-color); 
+}
+.light .container-txt span.fist-text {
+  color: var(--secondary-light-color);
+}
+.light .txt-topo.sec-text:before {
+  background-color: var(--body-light-color);
+  transition: background-color 0.5s;
+}
+.light .buttons-person {
+  box-shadow: var(--secondary-light-color) 0px 7px 0px 0px;
+}
+.light .title-about {
+  color: var(--primary-light-color);
+}
+.light .description-about-me p {
+  color: var(--secondary-light-color);
+}
+.light .tech span {
+  color: var(--secondary-light-color);
+}
+.light h2.titulo {
+  color: var(--primary-light-color);
+}
+.light .carousel-indicators [data-bs-target] {
+  background-color: var(--secondary-light-color);
+}
+.light .title-work-block h3 {
+  color: var(--primary-light-color);
+}
+.light .description-work-block span {
+  color: var(--secondary-light-color);
+}
+.light .github-repositorio:hover {
+  background-color: var(--body-light-color);
+  color: var(--secondary-light-color);
+}
+.light footer {
+  background-color: var(--footer-light-color);
+}
+.light .logo-footer a img {
+  filter: invert();
+}
+.light .btn-footer a {
+  color: var(--secondary-light-color);
+}
+.light .btn-footer a:hover{
+  border-bottom: 2px solid var(--tertiary-light-color);
+}
+.light .copyright {
+  background-color: var(--footer-light-color);
+}
+.light .copyright h3 {
+  color: var(--secondary-light-color);
+}
