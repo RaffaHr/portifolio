@@ -335,6 +335,7 @@ span.txt-name {
     border: 0;
     box-shadow: var(--tertiary-color) 0px 7px 0px 0px;
     background-color: #55e5a4;
+    color: var(--footer-color);
     border-radius: 12px;
     overflow: hidden;
     transition: 31ms cubic-bezier(.5, .7, .4, 1);
