@@ -146,7 +146,7 @@ const textLoad = () => {
   }, 0);
   setTimeout(() => {
     text.textContent = "Analista"
-  }, 4050);
+  }, 4010);
   setTimeout(() => {
     text.textContent = "Estudante"
   }, 8050);
