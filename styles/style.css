@@ -92,36 +92,47 @@ header a {
     display: flex;
     align-items: center;
     width: 70%;
-    justify-content: space-between;
-}
-.menu-desktop a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid var(--primary-color);
-    border-radius: 15px;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    font-size: 15px;
-    padding: 10px 15px;
+    
 }
 
-header nav.menu-desktop a:hover {
-    color: #fff;
-    transform: scale(1.1);
-    border: 2px solid var(--primary-color);
-    background-color: var(--body-dark-color);
+/* novo */
+.menu-desktop ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+}
+.btn-nav{
+  position: relative;
 }
 
-header nav ul {
-    list-style-type: none;
+.btn-nav a {
+  color: #a9a9a9;
+  text-decoration: none;
+  font-size: 24px;
+  text-align: start;
+
+
 }
 
-header nav.menu-desktop ul li {
-    display: inline-block;
-    padding: 0 30px;
+.btn-nav a::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -1px;
+  background: var(--primary-color);
+  height: 2px;
+  transition: 0.3s ease-out;
 }
 
+.btn-nav:hover a::after {
+  width: 100%;
+  
+}
+
+/* fim */
 .logo a {
     display: flex;
     justify-content: center;
@@ -316,13 +327,13 @@ span.txt-name {
       border-left-color: transparent;
     }
   }
-.container-btn-person {
+.container-btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
    }
-   button.buttons-person {
+   button.buttons {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -335,14 +346,14 @@ span.txt-name {
     border: 0;
     box-shadow: var(--tertiary-color) 0px 7px 0px 0px;
     background-color: #55e5a4;
-    color: var(--footer-color);
+    color: var(--body-dark-color);
     border-radius: 12px;
     overflow: hidden;
-    transition: 31ms cubic-bezier(.5, .7, .4, 1);
+    transition: all 0.3s ease;
     cursor: pointer;
     margin: 0;
    }
-   .buttons-person:before {
+   .buttons:before {
     content: attr(alt);
     display: flex;
     align-items: center;
@@ -354,21 +365,22 @@ span.txt-name {
     color: white;
     letter-spacing: 4px;
     opacity: 1;
+    transition: all 0.3s ease;
    }
    
-   .buttons-person:active {
+   .buttons:active {
     box-shadow: none;
     transform: translateY(7px);
-    transition: 35ms cubic-bezier(.5, .7, .4, 1);
+    transition: all 0.3s ease;
    }
-   
-   .buttons-person:hover:before {
+   .buttons:hover:before {
     transition: all .0s;
     transform: translateY(100%);
     opacity: 0;
+    transition: all 0.3s ease;
    }
    
-   .buttons-person i {
+   .buttons i {
      margin-left: 5px;
    }
 .img-topo-site {
@@ -649,7 +661,7 @@ section.portfolio .flex {
     transition: all 0.3s ease;
 }
 .btn-project a:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
     background-color: var(--tertiary-color);
     transition: all 0.3s ease;
 }
@@ -980,16 +992,16 @@ ul {
   .example-2 .icon-content a[data-social="github"] ~ .tooltip {
     background-color: #24262a;
   }
-  .example-2 .icon-content a[data-social="instagram"] .filled,
-  .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  .example-2 .icon-content a[data-social="email"] .filled,
+  .example-2 .icon-content a[data-social="email"] ~ .tooltip {
     background: linear-gradient(
       45deg,
-      #405de6,
-      #5b51db,
-      #b33ab4,
-      #c135b4,
-      #e1306c,
-      #fd1f1f
+      #1AC8FC,
+      #1BB6FA,
+      #1C86F5,
+      #1D70F2,
+      #1D70F2,
+      #1D70F2
     );
   }
   

@@ -29,10 +29,16 @@ body.light {
 }
 .light .txt-topo.sec-text:before {
   background-color: var(--body-light-color);
-  transition: background-color 0.5s;
+  transition: background-color 0.3s;
 }
-.light .buttons-person {
+.light button.buttons {
   box-shadow: var(--secondary-light-color) 0px 7px 0px 0px;
+  transition: all 0.3s ease;
+}
+.light .buttons:active{
+  box-shadow: none;
+  transform: translateY(7px);
+  transition: all 0.5s ease;
 }
 .light .title-about {
   color: var(--primary-light-color);
@@ -67,9 +73,6 @@ body.light {
 }
 .light .btn-footer a {
   color: var(--secondary-light-color);
-}
-.light .btn-footer a:hover{
-  border-bottom: 2px solid var(--tertiary-light-color);
 }
 .light .copyright {
   background-color: var(--footer-light-color);
