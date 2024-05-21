@@ -78,9 +78,7 @@
       justify-content: center;
   }
 
-  .txt-topo-site h1, span.txt-name {
-    text-align: center;
-  }
+
   .txt-topo-site {
       width: 100%;
   }
@@ -89,10 +87,10 @@
       font-size: 20px;
       font-weight: 400;
   }
-  .container-txt {
+/*   .container-txt {
     display: flex;
     justify-content: center;
-  }
+  } */
   .container-txt span.fist-text {
     font-size: 18px;
   }
