@@ -32,7 +32,6 @@
 
 body {
     background-color: var(--body-dark-color);
-    height: 100vh;
     transition: all 0.5s;
     margin: 0;
     padding: 0;
@@ -43,11 +42,12 @@ html {
     /* Adiciona uma animação suave à rolagem */
 }
 
-hr {
+hr{
     color: var(--primary-color);
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
     margin: 20px 0;
+    opacity: .10;
 }
 
 .interface {
@@ -59,10 +59,18 @@ hr {
     display: flex;
 }
 
-
+#bg-gradient-top-1 {
+  background: radial-gradient(46.97% 53.54% at 50% 46.46%, rgba(0, 250, 220, 0.2) 0%, rgba(0, 1, 2, 0) 100%), #232532;
+  height: 100vh;
+}
+#bg-gradient-top-2 {
+  background: radial-gradient(97% 53.54% at 50% 46.46%, rgba(0, 250, 220, 0.2) 0%, rgba(0, 1, 2, 0) 100%), linear-gradient(0deg, #232532, #232532), rgb(255, 255, 255);
+  z-index: -2;
+}
 h2.titulo {
     color: var(--tertiary-color);
     font-size: 38px;
+    font-weight: bold;
     line-height: 30px;
     display: flex;
     align-items: center;
@@ -265,7 +273,7 @@ header a {
 section.topo-do-site .flex {
     align-items: center;
     justify-content: center;
-    margin: 100px;
+    padding: 100px;
 }
 
 .txt-topo-site {
@@ -285,8 +293,11 @@ section.topo-do-site .flex {
 }
 span.txt-name {
     color: var(--primary-color);
-    font-size: 60px;
-
+    font-size: 50px;
+  font-weight: bold;
+}
+.container-txt {
+  display: flex;
 }
 .container-txt span.fist-text {
     color: var(--tertiary-color);
@@ -300,33 +311,34 @@ span.txt-name {
     font-size: 30px;
     font-weight: bold;
 }
-.txt-topo.sec-text:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: var(--body-dark-color);
-    border-left: 2px solid var(--primary-color);
-    animation: 
-    typeText 4s steps(15) infinite,
-    cursor 0.5s step-end infinite alternate;
-    transition: background-color 0.5s;
+span.txt-topo.sec-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--primary-color);
+  animation: typeAndDelete-top 5s steps(20) infinite,
+    blinkCursor 0.4s step-end infinite alternate;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: 8px;
 }
-@keyframes typeText {
-    40%, 60% {
-      left: calc(100% + 4px);
-    }
-    100%{
-      left: 0%;
-    }
+@keyframes typeAndDelete-top {
+  0%,
+  10% {
+    width: 0%;
   }
-  @keyframes cursor {
-    50% {
-      border-left-color: transparent;
-    }
+
+  45%,
+  55%, 65%, 75% {
+    width: 100%;
   }
+
+  90%,
+  100% {
+    width: 0%;
+  }
+}
 .container-btn {
     display: flex;
     align-items: center;
@@ -394,6 +406,7 @@ span.txt-name {
 .img-topo-site img {
     max-width: 80%;
     max-height: 50%;
+    animation: flutuar 4s infinite ease-in-out;
 }
 
 /* ESTILO DO SOBRE MIM */
@@ -448,8 +461,9 @@ span.txt-name {
     color: #fff;
     display: flex;
     flex-direction: column;
-
+    align-items: start;
 }
+
 
 .description-about-me>p {
     color: #A9A9A9;
@@ -487,7 +501,8 @@ span.txt-name {
     display: none;
 }
 .block-desk {
-    border: 3px solid #26313F;
+    border: 3px solid var(--body-light-color);
+    filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
     display: flex;
     flex-direction: column;
     width: 370px;
@@ -527,14 +542,13 @@ span.txt-name {
 
 /* ESTILO DO PORTFÓLIO */
 section.portfolio {
-    padding: 80px 4%;
+  padding: 0 4% 40px 4%;
 }
 
 section.portfolio .flex {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
 }
 /* NOVO CARD PROJETCT */
 .new-container-project {
@@ -555,6 +569,7 @@ section.portfolio .flex {
     width: 100%;
     display: flex;
     height: auto;
+    
 }
 
 .imgs-container-project img#macbook {

@@ -146,11 +146,11 @@ const textLoad = () => {
   }, 0);
   setTimeout(() => {
     text.textContent = "Analista"
-  }, 4010);
+  }, 5050);
   setTimeout(() => {
     text.textContent = "Estudante"
-  }, 8050);
+  }, 10050);
 }
 textLoad()
-setInterval(textLoad, 12000)
+setInterval(textLoad, 15000)
 /* end script */
