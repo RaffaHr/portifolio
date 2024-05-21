@@ -2,6 +2,9 @@
     .container-txt span.txt-topo  {
     font-size: 25px;
 }
+.container-txt span.fist-text {
+    display: none;
+  }
 }
 @media screen and (max-width: 1020px) {
     #bg-gradient-top-1 {
@@ -70,6 +73,10 @@
   .topo-do-site h1 {
       font-size: 30px;
   }
+  #container-txt-topo {
+    justify-content: center;
+    text-align: center;
+  }
   .container-txt span.txt-topo {
       font-size: 20px;
   }
@@ -87,15 +94,16 @@
       font-size: 20px;
       font-weight: 400;
   }
-/*   .container-txt {
+  .container-txt {
     display: flex;
     justify-content: center;
-  } */
+  }
   .container-txt span.fist-text {
-    font-size: 18px;
+    display: none;
   }
   span.txt-topo.sec-text {
     font-size: 18px;
+    margin-left: 0;
   }
   .container-btn {
       justify-content: space-around;
@@ -212,7 +220,7 @@
       border-radius: 20px;
       margin: 20px;
       max-width: 810px;
-      filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
+      filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.3));
 
     }
     .carousel-indicators {
