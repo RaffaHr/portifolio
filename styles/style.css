@@ -150,8 +150,8 @@ header a {
 }
 
 .logo img {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
 }
 
 /* ESTILO DO MENU MOBILE */
@@ -410,7 +410,9 @@ span.txt-topo.sec-text {
     max-height: 50%;
     animation: flutuar 4s infinite ease-in-out;
 }
-
+.photo-topo-light {
+  display: none;
+}
 /* ESTILO DO SOBRE MIM */
 .sobre-mim {
     padding: 40px 4%;
@@ -910,9 +912,7 @@ footer .line-footer p a {
 .btn-footer:hover::after {
     width: 100%;
 }
-/* .btn-footer a:hover {
-    border-bottom: 2px solid var(--primary-color);
-} */
+
 
 ul {
     list-style: none;

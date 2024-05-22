@@ -40,6 +40,12 @@ body.light {
 .light .container-txt span.fist-text {
   color: var(--secondary-light-color);
 }
+.light .photo-topo-dark {
+  display: none;
+}
+.light .photo-topo-light {
+  display: block;
+}
 .light .txt-topo.sec-text {
   color: var(--secondary-light-color);
   border-color: var(--secondary-light-color);
@@ -90,6 +96,9 @@ body.light {
 }
 .light .btn-footer a {
   color: var(--secondary-light-color);
+}
+.light .btn-nav a::after {
+  background: var(--primary-light-color);
 }
 .light .copyright {
   background-color: var(--footer-light-color);
