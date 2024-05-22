@@ -1,11 +1,22 @@
+@media screen and (min-width: 1440px) {
+    section {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    section.formulario {
+        display: block;
+        height: auto;
+    }
+}
+/* Tablet e mobile (adaptação) */
 @media screen and (max-width: 1079px) {
     .container-txt span.txt-topo  {
-    font-size: 25px;
+    font-size: 23px;
+} 
 }
-.container-txt span.fist-text {
-    display: none;
-  }
-}
+/* Tablet e mobile */
 @media screen and (max-width: 1020px) {
     #bg-gradient-top-1 {
         height: auto;
@@ -220,7 +231,7 @@
       border-radius: 20px;
       margin: 20px;
       max-width: 810px;
-      filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.3));
+      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.3));
 
     }
     .carousel-indicators {
@@ -247,11 +258,16 @@
   }
   /* PORTFÓLIO */
   .imgs-container-project img#macbook {
-      margin-bottom: -23%;
-      width: 360px;
+    display: none;
+  }
+  .imgs-container-project img#iphone {
+    display: block;
+  }
+  .terminal-loader {
+    height: 360px;
   }
   .project-description > span {
-      font-size: smaller;
+      font-size: 15px;
   }
   .btn-project  a {
       padding: 10px 5%;
@@ -276,4 +292,50 @@
       width: 60px;
       height: 60px;
   }
+}
+@media screen and (max-width: 360px) {
+    .menu-mobile nav ul li a {
+        font-size: 14px;
+    }
+    .mode-dark-light span {
+        font-size: 14px;
+    }
+    button.buttons {
+        font-size: 9px;
+    }
+    h2.titulo  {
+        font-size: 20px;
+    }
+    .title-about {
+        font-size: 15px;
+    }
+    .description-about-me p {
+        font-size: 16px;
+        margin: 0 20px
+    }
+    .title-work-block h3 {
+        font-size: 18px;
+    }
+    .description-work-block {
+        margin: 8px 20px;
+    }
+    .project-description > span {
+    font-size: 13px;
+    }
+    .new-container-project {
+        width: 100%;
+    } 
+    .imgs-container-project {
+        width: 100%;
+    }
+    .terminal-loader {
+        width: 100%;
+        height: 70%;
+    }
+    .text {
+        font-size: 35px;
+    }
+    .btn-footer a {
+        font-size: 15px;
+    }
 }
