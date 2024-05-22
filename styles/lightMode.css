@@ -80,6 +80,9 @@ body.light {
 .light .carousel-indicators [data-bs-target] {
   background-color: var(--secondary-light-color);
 }
+.light .carousel-control-next, .light .carousel-control-prev {
+  filter: invert(1);
+}
 .light .title-work-block h3 {
   color: var(--primary-light-color);
 }
