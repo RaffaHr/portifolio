@@ -28,6 +28,12 @@ body.light {
 .light .btn-abrir-menu i {
   color: var(--secondary-light-color);
 }
+.light .menu-mobile {
+  background-color: var(--body-light-color);
+}
+.light .menu-mobile .btn-fechar i, .light .menu-mobile nav ul li a, .light .mode-dark-light span {
+  color: var(--secondary-light-color);
+}
 .light .txt-topo-site h1 {
   color: var(--primary-light-color);
 }

@@ -208,8 +208,8 @@ header a {
 }
 
 .menu-mobile nav ul li a:hover {
-    background-color: var(--tertiary-color);
-    color: var(--secondary-color);
+    background-color: #ffffff30;
+    color: var(--primary-color);
 }
 .overlay-menu {
     background-color: #000000df;
