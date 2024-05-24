@@ -1,9 +1,15 @@
-/* script do menu mobile */
+const modal = document.querySelector('.modal-contact-form')
 let btnMenu = document.getElementById("btn-menu");
 let menu = document.getElementById("menu-mobile");
 let overlay = document.getElementById("overlay-menu");
 let menuMobalClick = document.getElementById("menuMobalClick");
 let btnFechar = document.getElementById("btn-fechar");
+const chkDesk = document.getElementById("chk-desk");
+const chkMobile = document.getElementById("chk-mobile");
+const inputNome = document.getElementById("name")
+const txt = document.getElementById("msg")
+
+/* script do menu mobile */
 
 btnMenu.addEventListener("click", () => {
   menu.classList.add("abrir-menu");
@@ -24,8 +30,6 @@ overlay.addEventListener("click", () => {
 
 /* script do botao e ação de trocar de tema */
 
-const chkDesk = document.getElementById("chk-desk");
-const chkMobile = document.getElementById("chk-mobile");
 
 /* toggle light mode */
 function toggleLightMode() {
@@ -108,15 +112,26 @@ function enviarMensagem() {
   let phone = document.getElementById("phone").value.trim();
   let msg = document.getElementById("msg").value;
 
+
   if (phone.length === 0) {
     phone = "Não informado";
   }
   if(email.length === 0) {
     email = "Não informado"
   }
-  if(nome.length === 0 || msg.length === 0) {
-    alert('Gentileza inserir o nome e a mensagem!')
-    return
+
+  if(nome.length === 0) {
+
+    inputNome.classList.add("invalidInput")
+    modal.style.display = "flex"
+    document.body.style.overflow = 'hidden'
+    return 
+  } else if (msg.length === 0) {
+
+    txt.classList.add("invalidInput")
+    modal.style.display = "flex"
+    document.body.style.overflow = 'hidden'
+    return 
   } else {
     let buildMsg = `Olá Raphael, me chamo *${nome}* e vim através do seu portifólio.
     O motivo do meu contato é: ${msg}.
@@ -134,8 +149,31 @@ function enviarMensagem() {
       window.open(linkWhatsApp, "_blank");
     }
   }
-/* end script */
+  inputNome.addEventListener('input', function(event) {
+    let inputValue = event.target.value 
 
+    if(inputValue !== '') {
+      inputNome.classList.remove("invalidInput")
+    }
+  })
+  txt.addEventListener('input', function(event) {
+    let inputValue = event.target.value 
+
+    if(inputValue !== '') {
+      txt.classList.remove("invalidInput")
+    }
+  })
+  /* end script */
+/* função de fechar o modal */
+
+const btnCloseModal = document.getElementById('btn-modal')
+btnCloseModal.addEventListener('click', () => {
+
+  modal.style.display = "none"
+  document.body.style.overflow = 'auto'
+})
+
+/* end script */
 /* script Typing Text Animation */
 
 const text = document.querySelector('.sec-text')

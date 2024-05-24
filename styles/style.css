@@ -783,12 +783,14 @@ form {
     gap: 10px;
     margin-top: 40px;
 }
-
+.invalidInput {
+  border: 2px solid #ef4444;
+}
 form input,
 form textarea {
     width: 100%;
     background-color: #242424;
-    border: 0;
+    border: 2px solid #242424;
     outline: 0;
     padding: 20px 15px;
     border-radius: 15px;
@@ -1022,3 +1024,79 @@ ul {
     font-size: 15px;
     text-align: center;
 }
+.modal-contact-form {
+  display: none;
+  background-color: rgb(0 0 0 / 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  justify-content: center;
+  align-items: center;
+  overscroll-behavior: none;
+}
+.modal-elements {
+  background-color: var(--tertiary-color);
+  padding: 1.25rem;
+  border-radius: 10px;
+  max-width: 600px; 
+  width: 30vw;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.modal-elements h1 {
+  font-weight: bold;
+  color: #ef4444;
+}
+.modal-elements span {
+  text-align: center;
+}
+.modal-elements button {
+  height: 50px;
+  position: relative;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 0;
+  box-shadow: var(--secondary-color) 0px 7px 0px 0px;
+  background-color: #55e5a4;
+  color: var(--body-dark-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 0;
+  width: 50%;
+}
+.modal-elements button:before {
+  content: attr(alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 4px;
+  opacity: 1;
+  transition: all 0.3s ease;
+ }
+ 
+ .modal-elements button:active {
+  box-shadow: none;
+  transform: translateY(7px);
+  transition: all 0.3s ease;
+ }
+ .modal-elements button:hover:before {
+  transition: all .0s;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+ }

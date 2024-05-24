@@ -602,10 +602,10 @@
         <h2 class="titulo">Entrar em contato</span></h2>
 
         <form class="contact-form">
-          <input type="text" id="name" placeholder="Seu nome completo:" required>
+          <input type="text" id="name" placeholder="Seu nome completo:">
           <input type="text" id="email" placeholder="Seu e-mail (Opcional):">
           <input type="tel" id="phone" placeholder="Seu celular (Opcional):">
-          <textarea id="msg" placeholder="Sua mensagem (Max. 1000 caracteres)" maxlength="1000" required></textarea>
+          <textarea id="msg" placeholder="Sua mensagem (Max. 1000 caracteres)" maxlength="1000"></textarea>
 
             <button class="contact-btn btn-enviar" type="submit" onclick="enviarMensagem()">
               <div class="svg-wrapper-1">
@@ -732,6 +732,18 @@
     <h3>Copyright © 2024 | Raffa</h3>
   </div>
 </div>
+
+<!-- MODAL DO CONTACT FORM -->
+
+<div class="modal-contact-form">
+  <div class="modal-elements">
+    <h1>Atenção!</h1>
+    <span>Gentileza preencher os campos no formulário corretamente!</span>
+    <button id="btn-modal">Fechar</button>
+  </div>
+</div>
+
+<!-- FIM DO MODAL -->
 </body>
 
 </html>

@@ -302,6 +302,15 @@
       width: 60px;
       height: 60px;
   }
+  .modal-elements {
+    width: 70vw;
+  }
+  .modal-elements h1 {
+    font-size: xx-large;
+  }
+  .modal-elements span {
+    font-size: smaller;
+  }
 }
 @media screen and (max-width: 360px) {
     .menu-mobile nav ul li a {
@@ -348,4 +357,10 @@
     .btn-footer a {
         font-size: 15px;
     }
+    .modal-elements {
+        width: 85vw;
+      }
+      .modal-elements h1 {
+        font-size: x-large;
+      }
 }
