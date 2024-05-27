@@ -192,3 +192,13 @@ const textLoad = () => {
 textLoad()
 setInterval(textLoad, 15000)
 /* end script */
+
+/* impedir que a pagina atualize ao clicar no botao do formulario de contsto */
+
+const form = document.querySelector('.contact-form')
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+})
+
+/* end script */
